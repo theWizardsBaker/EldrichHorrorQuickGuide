@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">EldrichHorrorQuickGuide</string>
+    <string name="app_name">Eldrich Horror Reference</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="game_reference">Icon Reference</string>
+
     <string-array name="game_phases">
-        <item>1. Action Phase</item>
-        <item>2. Encounter Phase</item>
-        <item>3. Mythos Phase</item>
+        <item>Action Phase</item>
+        <item>Encounter Phase</item>
+        <item>Mythos Phase</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="icon_ref_player_count">Player Count</string>
+    <string name="icon_ref_player_count">Number of Players</string>
     <string name="icon_ref_spawn_gates">Spawn Gates</string>
     <string name="icon_ref_spawn_clues">Spawn Clues</string>
     <string name="icon_ref_monster_surge">Monster Surge</string>

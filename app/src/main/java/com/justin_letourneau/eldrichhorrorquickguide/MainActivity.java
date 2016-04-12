@@ -17,6 +17,12 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
+
+//Designed by Freepik
+//123freevectors
+//fontspace.com
+//http://www.webdesignhot.com/
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -28,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    private ReferencePhaseModel mReferenceDocumentation;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -54,8 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             Gson mJSON = new Gson();
+            // get the raw JSON as a string
             String jsonString = new JSONFileIO().readJSON(getResources().openRawResource(R.raw.reference_items));
-            Object stuff = mJSON.fromJson(jsonString, ReferencePhaseModel.class);
+            // format the JSON string to Java object
+            mReferenceDocumentation = mJSON.fromJson(jsonString, ReferencePhaseModel.class);
         } catch (IOException e) {
             Log.e("JSON", "IO exception");
             e.printStackTrace();
@@ -88,9 +97,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             switch (position) {
-                case 0: return new ActionPhaseFragment();
-                case 1: return new EncounterPhaseFragment();
-                case 2: return new MythosPhaseFragment();
+                case 0:case 1:case 2:return ActionPhaseFragment.newInstance(mReferenceDocumentation.phase.get(position));
                 case 3: return new IconReferenceFragment();
                 default: return null;
             }

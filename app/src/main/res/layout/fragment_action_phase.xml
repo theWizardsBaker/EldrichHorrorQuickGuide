@@ -5,16 +5,19 @@
     tools:context="com.justin_letourneau.eldrichhorrorquickguide.ActionPhaseFragment">
 
 
-    <TextView
+    <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/round_title_textView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        style="@style/EldrichHeadding"
+        android:textSize="40sp"
+        android:textIsSelectable="true" />
 
-    <TextView
+    <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -22,13 +25,15 @@
         android:id="@+id/round_summary_textView"
         android:layout_below="@+id/round_title_textView"
         android:layout_centerHorizontal="true"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textSize="20sp" />
 
     <ExpandableListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/round_actions_expandableListView"
         android:layout_gravity="center"
+        style="@android:style/Widget.Holo.ListView.DropDown"
         android:layout_below="@+id/round_summary_textView"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
