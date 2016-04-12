@@ -5,17 +5,39 @@
     tools:context="com.justin_letourneau.eldrichhorrorquickguide.ActionPhaseFragment">
 
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView7"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/divider"
+            android:scaleType="fitStart"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="0dp"
+            android:cropToPadding="true"
+            android:layout_weight="1"
+            android:layout_gravity="bottom|center_horizontal" />
+    </LinearLayout>
+
     <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/round_title_textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         style="@style/EldrichHeadding"
         android:textSize="40sp"
-        android:textIsSelectable="true" />
+        android:textIsSelectable="true"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
     <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
         android:layout_width="wrap_content"
@@ -25,8 +47,12 @@
         android:id="@+id/round_summary_textView"
         android:layout_below="@+id/round_title_textView"
         android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
+        android:scrollingCache="false" />
 
     <ExpandableListView
         android:layout_width="wrap_content"
@@ -36,4 +62,5 @@
         style="@android:style/Widget.Holo.ListView.DropDown"
         android:layout_below="@+id/round_summary_textView"
         android:layout_alignParentStart="true" />
+
 </RelativeLayout>
