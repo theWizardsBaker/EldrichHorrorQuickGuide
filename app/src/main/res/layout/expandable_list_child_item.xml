@@ -11,7 +11,7 @@
         android:id="@+id/imageView2"
         />
 
-    <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
+    <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"

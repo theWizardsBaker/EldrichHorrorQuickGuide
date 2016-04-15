@@ -27,7 +27,7 @@
             android:layout_gravity="bottom|center_horizontal" />
     </LinearLayout>
 
-    <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
+    <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -40,7 +40,7 @@
         android:textStyle="italic"
         android:layout_marginTop="45dp" />
 
-    <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
+    <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -70,6 +70,7 @@
         android:layout_marginLeft="5dp"
         android:focusableInTouchMode="false"
         android:layout_alignParentEnd="false"
-        android:layout_marginBottom="80dp" />
+        android:layout_marginBottom="80dp"
+        android:indicatorLeft="80dp" />
 
 </RelativeLayout>

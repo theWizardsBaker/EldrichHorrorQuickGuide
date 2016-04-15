@@ -1,171 +1,311 @@
 {
   "phase" : [
+    {
+      "title" : "Action Phase",
+      "subtitle" : "Investigators perform actions to move about the game board and prepare for the tasks ahead",
+      "actions" : [
         {
-          "title" : "Action Phase",
-          "subtitle" : "Investigators perform actions to move about the game board and prepare for the tasks ahead",
-          "actions" : [
+          "title" : "Travel",
+          "image": "navigation",
+          "description":"Move to an adjacent connecting space",
+          "detail":[
             {
-              "title" : "Travel",
-              "image": "navigation",
-              "description":"Move to an ajacent connecting space",
-              "detail":[
-                "Move an extra space using a travel ticket",
-                "Train tickets used only on Train Paths and Ship tickets on Ship Paths"
-              ]
+              "image": null,
+              "description": "Spend travel tickets to Move an extra space"
             },
             {
-              "title" : "Prepare",
-              "image": "travel_token",
-              "description":"Collect a travel ticket",
-              "detail":[
-                "Maximum 2 tickets per investigator",
-                "Collected on City Spaces only",
-                "Can only be collected if the coresponding path is connected to the City Space, eg. Train token if City Space connects to a train path"
-              ]
-            },
-            {
-              "title" : "Acquire Assets",
-              "image": "asset_card",
-              "description":"Purchase Asset Cards from the reserve",
-              "detail":[
-                "Influence roll determines",
-                "If no cards are gained, one reserve card may be discarded and replaced",
-                "<b>Cannot</b> be preformed if there is a Monster token shares the space"
-              ]
-            },
-            {
-              "title" : "Rest",
-              "image": "health_token",
-              "description":"Gain 1 Health and 1 Sanity",
-              "detail":[
-                "Cannot be preformed if a Monster shares the same space"
-              ]
-            },
-            {
-              "title" : "Trade",
-              "image": "trade",
-              "description":"Trade possessions with another investigator",
-              "detail":[
-                "Items that are tradeable: Assets, Artifacts, Clues, Spells, Travel Tickets"
-              ]
-            },
-            {
-              "title" : "Component Action",
-              "image": "investigator_card",
-              "description":"Preform and action listed on Investigator sheet or card",
-              "detail":[
-                "Actions are preceded by the word <b>Action:</b>",
-                "One action per component (card, sheet) per round",
-                "Preform actions held by investigators sharing the same space (<b>Local Action:</b>)"
-              ]
+              "image": null,
+              "description": "Train tickets spent on Train Paths and Ship tickets on Ship Paths"
             }
           ]
         },
         {
-          "title" : "Encounter Phase",
-          "subtitle" : "Investigators fight Monsters or resolve Encounter Cards on their current space",
-          "actions" : [
+          "title" : "Prepare for Travel",
+          "image": "travel_token",
+          "description":"Collect a travel ticket",
+          "detail":[
+            "An investigator cannot have more than 2 tickets",
+            "Collected on City Spaces only",
             {
-              "title" : "Combat Encounter",
-              "image":"monster",
-              "description":"Encounter a Monster on the same space",
-              "detail":[
-                "Investigators <i>must</i> encounter all monsters they share a space with one at a time",
-                "After all encounters have been resolved and no Monsters share the same space, investigators <b>may choose to resolve another encounter</b>"
-              ]
+              "image": null,
+              "description": "Gain a Ship token if a Ship Path is connected to an adjacent space"
             },
             {
-              "title" : "Location Encounter",
-              "image": "encounter_card",
-              "description":"Encounter either a space specific or general Encounter Card",
-              "detail":[
-                "Text below each named space lists the most common effect found on that specific type of card"
-              ]
-            },
-            {
-              "title" : "Token Encounter",
-              "image":"expidition_token",
-              "description":"Encounter a card that coresponds to a token on that space",
-              "detail":[
-                "Clue token: Resolve Research Encounter card",
-                "Gate token: Resolve Other World Encounter card",
-                "Active Expedition token: Resolve Expedition Encounter card",
-                "Rumor tokens: Resolve Rumor Mythos Encounter card",
-                "A Defeated Invesigator: Resolve research Encounter card"
-              ]
+              "image": null,
+              "description": "Gain a Train token if a Train Path is connected to an adjacent space"
             }
           ]
         },
         {
-          "title" : "Mythos Phase",
-          "subtitle" : "Lead Investigator resolves on Mythos card. These cards often advance the Doom token, spawn Gates, or raise other challenge investigators will need to overcome",
-          "actions" : [
+          "title" : "Acquire Assets",
+          "image": "asset_card",
+          "description":"Purchase Asset Cards from the reserve",
+          "detail":[
             {
-              "title" : "Advance the Omen",
-              "image": "advance_omen",
-              "description":"Move the Omen Token clockwise one space.",
-              "detail":[
-                "Advance the Doom Token by one for each Gate on the gameboard that matches the Omen Token's new space"
-              ]
+              "image": null,
+              "description": "Influence roll determines successes"
             },
             {
-              "title" : "Resolve Reconing Effects",
-              "image": "reckoning",
-              "description":"Resolve all effects with a red reckoning icon",
-              "detail":[
-                "Resolve the effects in order: Monsters, Ancient One sheet, <b><i>Ongoing</i></b> Mythos cards, investigator possessions and Conditions"
-              ]
+              "image": null,
+              "description": "If no cards are gained, one reserve card may be discarded and replaced"
             },
             {
-              "title" : "Spawn Gates",
-              "image": "spawn_gates",
-              "description":"Spawn Gates indicated on the Reference card",
-              "detail":[
-                "When a Gate is spawned, a Monster is spawned on the same space"
-              ]
+              "image": null,
+              "description": "<b>Cannot</b> be preformed if a Monster token shares the same space"
             },
             {
-              "title" : "Monster Surge",
-              "image": "spawn_monsters",
-              "description":"Spawn Monsters at <b>each Gate</b> (that match the Omen token's space)",
-              "detail":[
-                "If there are no matching Gates on the game board, spawn one Gate instead"
-              ]
+              "image": null,
+              "description": "Bank Loans of 2 successes may be added to the test result in exchange for a Debt Condition card"
             },
             {
-              "title" : "Spawn Clues",
-              "image": "spawn_clues",
-              "description":"Spawn Clues",
-              "detail":[
-
-              ]
+              "image": null,
+              "description": "An investigator cannot take a Bank Loan if they already have a Debt Condition"
+            }
+          ]
+        },
+        {
+          "title" : "Rest",
+          "image": "health_token",
+          "description":"Gain 1 Health and 1 Sanity",
+          "detail":[
+            {
+              "image": null,
+              "description": "Cannot be preformed if a Monster shares the same space"
+            }
+          ]
+        },
+        {
+          "title" : "Trade",
+          "image": "trade",
+          "description":"Trade possessions with another investigator",
+          "detail":[
+            {
+              "image": null,
+              "description": "Items that are tradeable: Assets, Artifacts, Clues, Spells, Travel Tickets"
             },
             {
-              "title" : "Place Rumor Token",
-              "image": "place_rumor",
-              "description":"Place a Rumor token on the space listed",
-              "detail":[
-
-              ]
+              "image": null,
+              "description": "Items that are <b>not</b> tradeable: Condition cards, Health tokens, Sanity tokens, Improvement tokens"
             },
             {
-              "title" : "Place Eldrich Tokens",
-              "image": "place_eldritch",
-              "description":"Place the listed number of Eldrich tokens on this Mythos card",
-              "detail":[
-
-              ]
+              "image": null,
+              "description": "Cannot trade with defeated investigators"
+            }
+          ]
+        },
+        {
+          "title" : "Component Action",
+          "image": "investigator_card",
+          "description":"Preform and action listed on Investigator sheets, possessions or Condition cards",
+          "detail":[
+            {
+              "image": null,
+              "description": "Actions are preceded by the word <b><i>Action:</i></b>"
             },
             {
-              "title" : "Resolve Mythos Card Effects",
-              "image":null,
-              "description":"Resolve <b><i>Event</i></b> listed above the text effect",
-              "detail":[
-                "Immediately resolve the effect and discard the card",
-                "If there is an <i><b>Ongoing</b></i> trait it remains in play until discarded by a game effect"
-              ]
+              "image": null,
+              "description": "Each component action can only be preformed once per round"
+            },
+            {
+              "image": null,
+              "description": "Multiple investigators cannot perform the same action on a single component during a round (excluding Local Actions)"
+            },
+            {
+              "image": null,
+              "description": "Investigators sharing a space with another investigator that possesses a card with a Local Action may also perform that action"
             }
           ]
         }
-    ]
+      ]
+    },
+    {
+      "title" : "Encounter Phase",
+      "subtitle" : "Investigators fight Monsters or resolve Encounter Cards on their current space",
+      "actions" : [
+        {
+          "title" : "Combat Encounter",
+          "image":"monster",
+          "description":"Encounter a Monster on the same space",
+          "detail":[
+            {
+              "image": null,
+              "description": "Begin with the Lead Investigator and procede clockwise"
+            },
+            {
+              "image": null,
+              "description": "Investigators <b>must</b> encounter all monsters they share a space with one at a time"
+            },
+            {
+              "image": null,
+              "description": "After all encounters have been resolved and no Monsters share the same space, investigators <b>may choose to resolve another encounter</b>"
+            },
+            {
+              "image": null,
+              "description": "If an investigator has a Detained Condition card, he resolves the back of the Condition instead of resolving an encounter. This is preformed <b>even if</b> there is a Monster on the same space."
+            }
+          ]
+        },
+        {
+          "title" : "Location Encounter",
+          "image": "encounter_card",
+          "description":"Encounter either a space specific or general Encounter Card",
+          "detail":[
+            {
+              "image": null,
+              "description": "America Encounters: Arkham, Buenos Aires or San Francisco"
+            },
+            {
+              "image": null,
+              "description": "Europe Encounters: Istanbul, London or Rome"
+            },
+            {
+              "image": null,
+              "description": "Asia / Australia Encounters: Shanghai, Sydney or Tokyo"
+            },
+            {
+              "image": null,
+              "description": "Named non-Expeditin spaces provide a description that explains the most common effect found on encounter cards for that space"
+            }
+          ]
+        },
+        {
+          "title" : "Token Encounter",
+          "image":"expidition_token",
+          "description":"Encounter a card that coresponds to a token on that space",
+          "detail":[
+            {
+              "image": null,
+              "description": "Clue token: Resolve Research Encounter card"
+            },
+            {
+              "image": null,
+              "description": "Gate token: Resolve Other World Encounter card"
+            },
+            {
+              "image": null,
+              "description": "Active Expedition token: Resolve Expedition Encounter card"
+            },
+            {
+              "image": null,
+              "description": "Rumor tokens: Resolve Rumor Mythos Encounter card"
+            },
+            {
+              "image": null,
+              "description": "A Defeated Invesigator: Resolve research Encounter card"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "Mythos Phase",
+      "subtitle" : "Lead Investigator draws and resolves a Mythos card's effects.",
+      "actions" : [
+        {
+          "title" : "Advance the Omen",
+          "image": "advance_omen",
+          "description":"Move the Omen Token clockwise one space.",
+          "detail":[
+            {
+              "image": null,
+              "description": "Advance the Doom Token clockwise by one"
+            },
+            {
+              "image": null,
+              "description": "Advance Doom for each Gate on the gameboard that matches the Omen Token's new space"
+            }
+          ]
+        },
+        {
+          "title" : "Resolve Reconing Effects",
+          "image": "reckoning",
+          "description":"Resolve all effects with a red reckoning icon",
+          "detail":[
+            {
+              "image": null,
+              "description": "Resolve the effects in order: Monsters, Ancient One sheet, <b><i>Ongoing</i></b> Mythos cards in play, possessions and Conditions held by investigators"
+            }
+          ]
+        },
+        {
+          "title" : "Spawn Gates",
+          "image": "spawn_gates",
+          "description":"Spawn Gates indicated on the Reference card",
+          "detail":[
+            {
+              "image": null,
+              "description": "Spawn the number of gates listed on the Reference card"
+            },
+            {
+              "image": null,
+              "description": "When a Gate is spawned, a Monster is spawned on the same space"
+            }
+          ]
+        },
+        {
+          "title" : "Monster Surge",
+          "image": "spawn_monsters",
+          "description":"Spawn Monsters at <b>each Gate</b> (that match the Omen token's space)",
+          "detail":[
+            {
+              "image": null,
+              "description": "Resolve a Monster surge on each space containing a Gate that corresponds to the Omen"
+            },
+            {
+              "image": null,
+              "description": "If there are no matching Gates on the game board, spawn one Gate instead"
+            }
+          ]
+        },
+        {
+          "title" : "Spawn Clues",
+          "image": "spawn_clues",
+          "description":"Spawn Clues",
+          "detail":[
+            {
+              "image": null,
+              "description": "Spawn the number of clues listed on the Reference card"
+            }
+          ]
+        },
+        {
+          "title" : "Place Rumor Token",
+          "image": "place_rumor",
+          "description":"Place a Rumor token on the space listed",
+          "detail":[
+            {
+              "image": null,
+              "description": "Place a rumor token on the indicated space"
+            }
+          ]
+        },
+        {
+          "title" : "Place Eldrich Tokens",
+          "image": "place_eldritch",
+          "description":"Place the listed number of Eldrich tokens on this Mythos card",
+          "detail":[
+            {
+              "image": null,
+              "description": "Place the number of Eldrich tokens on the Mythos card"
+            }
+          ]
+        },
+        {
+          "title" : "Resolve Mythos Card Effects",
+          "image": "card_effect",
+          "description":"Resolve <b>Event</b> listed above the text effect",
+          "detail":[
+            {
+              "image": null,
+              "description": "Immediately resolve the effect and discard the card"
+            },
+            {
+              "image": null,
+              "description": "If there is an <b><i>Ongoing</i></b> trait it remains in play until discarded by a game effect"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -9,19 +9,19 @@ import android.widget.TextView;
 /**
  * Created by Neil on 4/11/2016.
  */
-public class EldrichDescriptionTextView extends TextView{
+public class EldritchDescriptionTextView extends TextView{
 
-    public EldrichDescriptionTextView(Context context) {
+    public EldritchDescriptionTextView(Context context) {
         super(context);
         init(context, null);
     }
 
-    public EldrichDescriptionTextView(Context context, AttributeSet attrs) {
+    public EldritchDescriptionTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public EldrichDescriptionTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public EldritchDescriptionTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
