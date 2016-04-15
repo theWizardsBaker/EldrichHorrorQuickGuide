@@ -4,6 +4,7 @@ package com.justin_letourneau.eldrichhorrorquickguide;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -116,7 +117,7 @@ public class ActionPhaseFragment extends Fragment {
 
             ImageView arrow = (ImageView) convertView.findViewById(R.id.expanded_direction_imageView);
             arrow.setVisibility(data.get(groupPosition).detail.size() == 0 ? View.INVISIBLE : View.VISIBLE);
-            arrow.setImageResource(isExpanded ? R.drawable.down_arrow : R.drawable.up_arrow);
+            arrow.setImageResource(isExpanded ? R.drawable.up_arrow : R.drawable.down_arrow);
 
             // get the action
             ReferencePhaseModel.ReferencePhase.ReferenceAction action = data.get(groupPosition);
@@ -129,21 +130,13 @@ public class ActionPhaseFragment extends Fragment {
             groupSubtitle.setText(Html.fromHtml(action.description));
 
             // set the image
-            String resource_image = action.image;
-            if(resource_image != null){
-                ImageView groupImage = (ImageView)convertView.findViewById(R.id.list_group_imageView);
-                // get the drawable resource from a string
-                //                Integer img_resource = Resources.getSystem().getIdentifier("divider", "drawable", convertView.getContext().getPackageName());
-                Integer img_resource = null;
-                try {
-                    img_resource = R.drawable.class.getField(resource_image).getInt(null);
-                    groupImage.setImageResource(img_resource);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (NoSuchFieldException e) {
-                    e.printStackTrace();
-                }
+            ImageView groupImage = (ImageView)convertView.findViewById(R.id.list_group_imageView);
+            try {
+                setImage(action.image, groupImage);
+            } catch (Exception e) {
+                Log.e("Group Image", e.toString());
             }
+
             return convertView;
         }
 
@@ -152,10 +145,18 @@ public class ActionPhaseFragment extends Fragment {
             if(convertView == null){
                 convertView = getActivity().getLayoutInflater().inflate(R.layout.expandable_list_child_item, null);
             }
-            String detail = data.get(groupPosition).detail.get(childPosition);
+            ReferencePhaseModel.ReferencePhase.ReferenceAction.ChildAction detail = data.get(groupPosition).detail.get(childPosition);
 
             TextView childDetail = (TextView) convertView.findViewById(R.id.list_child_descr_textView);
-            childDetail.setText(Html.fromHtml(detail));
+            childDetail.setText(Html.fromHtml(detail.description));
+
+            ImageView childImage = (ImageView) convertView.findViewById(R.id.list_child_imageView);
+
+            try {
+                setImage(detail.image, childImage);
+            } catch (Exception e) {
+                Log.e("Child Image", e.toString());
+            }
 
             return convertView;
         }
@@ -163,6 +164,17 @@ public class ActionPhaseFragment extends Fragment {
         @Override
         public boolean isChildSelectable(int groupPosition, int childPosition) {
             return false;
+        }
+
+        private void setImage(String imageResource, ImageView imageView) throws IllegalAccessException, NoSuchFieldException{
+            if(imageResource == null) {
+                imageView.setVisibility(View.INVISIBLE);
+            } else {
+                imageView.setVisibility(View.VISIBLE);
+                Integer img_resource = null;
+                img_resource = R.drawable.class.getField(imageResource).getInt(null);
+                imageView.setImageResource(img_resource);
+            }
         }
     }
 

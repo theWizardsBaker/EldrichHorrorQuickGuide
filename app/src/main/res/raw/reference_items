@@ -24,8 +24,14 @@
           "image": "travel_token",
           "description":"Collect a travel ticket",
           "detail":[
-            "An investigator cannot have more than 2 tickets",
-            "Collected on City Spaces only",
+            {
+              "image": null,
+              "description": "An investigator cannot have more than 2 tickets"
+            },
+            {
+              "image" : null,
+              "description": "Collected on City Spaces only"
+            },
             {
               "image": null,
               "description": "Gain a Ship token if a Ship Path is connected to an adjacent space"
@@ -51,7 +57,7 @@
             },
             {
               "image": null,
-              "description": "<b>Cannot</b> be preformed if a Monster token shares the same space"
+              "description": "<i>Cannot</i> be preformed if a Monster token shares the same space"
             },
             {
               "image": null,
@@ -85,7 +91,7 @@
             },
             {
               "image": null,
-              "description": "Items that are <b>not</b> tradeable: Condition cards, Health tokens, Sanity tokens, Improvement tokens"
+              "description": "Items that are <i>not</i> tradeable: Condition cards, Health tokens, Sanity tokens, Improvement tokens"
             },
             {
               "image": null,
@@ -100,7 +106,7 @@
           "detail":[
             {
               "image": null,
-              "description": "Actions are preceded by the word <b><i>Action:</i></b>"
+              "description": "Actions are preceded by the word <i>Action:</i>"
             },
             {
               "image": null,
@@ -129,19 +135,19 @@
           "detail":[
             {
               "image": null,
-              "description": "Begin with the Lead Investigator and procede clockwise"
+              "description": "Begin with the Lead Investigator and proceed clockwise"
             },
             {
               "image": null,
-              "description": "Investigators <b>must</b> encounter all monsters they share a space with one at a time"
+              "description": "Investigators <i>must</i> encounter all monsters they share a space with one at a time"
             },
             {
               "image": null,
-              "description": "After all encounters have been resolved and no Monsters share the same space, investigators <b>may choose to resolve another encounter</b>"
+              "description": "After all encounters have been resolved and no Monsters share the same space, investigators <i>may choose to resolve another encounter</i>"
             },
             {
               "image": null,
-              "description": "If an investigator has a Detained Condition card, he resolves the back of the Condition instead of resolving an encounter. This is preformed <b>even if</b> there is a Monster on the same space."
+              "description": "If an investigator has a Detained Condition card, he resolves the back of the Condition instead of resolving an encounter. This is preformed <i>even if</i> there is a Monster on the same space."
             }
           ]
         },
@@ -171,27 +177,27 @@
         {
           "title" : "Token Encounter",
           "image":"expidition_token",
-          "description":"Encounter a card that coresponds to a token on that space",
+          "description":"Encounter a card that corresponds to a token on that space",
           "detail":[
             {
-              "image": null,
+              "image": "clue_token",
               "description": "Clue token: Resolve Research Encounter card"
             },
             {
-              "image": null,
+              "image": "gate_token",
               "description": "Gate token: Resolve Other World Encounter card"
             },
             {
-              "image": null,
+              "image": "expidition_token",
               "description": "Active Expedition token: Resolve Expedition Encounter card"
             },
             {
-              "image": null,
+              "image": "rumor_token",
               "description": "Rumor tokens: Resolve Rumor Mythos Encounter card"
             },
             {
               "image": null,
-              "description": "A Defeated Invesigator: Resolve research Encounter card"
+              "description": "A Defeated Investigator: Resolve research Encounter card"
             }
           ]
         }
@@ -199,31 +205,27 @@
     },
     {
       "title" : "Mythos Phase",
-      "subtitle" : "Lead Investigator draws and resolves a Mythos card's effects.",
+      "subtitle" : "Lead Investigator draws and resolves a Mythos card's effects",
       "actions" : [
         {
           "title" : "Advance the Omen",
           "image": "advance_omen",
-          "description":"Move the Omen Token clockwise one space.",
+          "description":"Move the Omen Token clockwise one space",
           "detail":[
             {
-              "image": null,
-              "description": "Advance the Doom Token clockwise by one"
-            },
-            {
-              "image": null,
-              "description": "Advance Doom for each Gate on the gameboard that matches the Omen Token's new space"
+              "image": "doom_token",
+              "description": "Advance Doom for each Gate on the game board that matches the Omen Token's new space"
             }
           ]
         },
         {
-          "title" : "Resolve Reconing Effects",
+          "title" : "Resolve Reckoning Effects",
           "image": "reckoning",
           "description":"Resolve all effects with a red reckoning icon",
           "detail":[
             {
               "image": null,
-              "description": "Resolve the effects in order: Monsters, Ancient One sheet, <b><i>Ongoing</i></b> Mythos cards in play, possessions and Conditions held by investigators"
+              "description": "Resolve the effects in order: Monsters, Ancient One sheet, <i>Ongoing</i> Mythos cards in play, possessions and Conditions held by investigators"
             }
           ]
         },
@@ -245,7 +247,7 @@
         {
           "title" : "Monster Surge",
           "image": "spawn_monsters",
-          "description":"Spawn Monsters at <b>each Gate</b> (that match the Omen token's space)",
+          "description":"Spawn Monsters at <i>each Gate</i> (that match the Omen token's space)",
           "detail":[
             {
               "image": null,
@@ -293,7 +295,7 @@
         {
           "title" : "Resolve Mythos Card Effects",
           "image": "card_effect",
-          "description":"Resolve <b>Event</b> listed above the text effect",
+          "description":"Resolve <i>Event</i> listed above the text effect",
           "detail":[
             {
               "image": null,
@@ -301,7 +303,7 @@
             },
             {
               "image": null,
-              "description": "If there is an <b><i>Ongoing</i></b> trait it remains in play until discarded by a game effect"
+              "description": "If there is an <i>Ongoing</i> trait it remains in play until discarded by a game effect"
             }
           ]
         }

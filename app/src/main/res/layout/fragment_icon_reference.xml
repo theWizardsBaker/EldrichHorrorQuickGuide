@@ -246,7 +246,6 @@
                     android:layout_height="37dp"
                     android:id="@+id/imageView10"
                     android:src="@drawable/spawn_reference"
-                    android:layout_marginRight="10dp"
                     android:layout_gravity="top" />
 
                 <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
@@ -268,8 +267,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:id="@+id/imageView11"
-                    android:src="@drawable/reckoning_reference"
-                    android:layout_marginRight="10dp" />
+                    android:src="@drawable/reckoning_reference" />
 
                 <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
                     android:layout_width="wrap_content"

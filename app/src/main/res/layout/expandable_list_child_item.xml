@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
+    android:paddingLeft="150dp"
     >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/list_child_imageView"
+        android:paddingRight="5dp"
         />
 
     <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView

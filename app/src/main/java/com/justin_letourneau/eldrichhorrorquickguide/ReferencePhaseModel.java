@@ -56,15 +56,53 @@ public class ReferencePhaseModel implements Parcelable{
             public String title;
             public String image;
             public String description;
+            public ArrayList<ChildAction> detail;
 
-            public ArrayList<String> detail;
-
-            public ReferenceAction(String title, String image, String description, ArrayList<String> detail) {
+            public ReferenceAction(String title, String image, String description, ArrayList<ChildAction> detail) {
                 this.title = title;
                 this.image = image;
                 this.description = description;
                 this.detail = detail;
             }
+
+            public static class ChildAction implements Parcelable {
+                public String image;
+                public String description;
+
+                public ChildAction(String image, String description) {
+                    this.image = image;
+                    this.description = description;
+                }
+
+                @Override
+                public int describeContents() {
+                    return 0;
+                }
+
+                @Override
+                public void writeToParcel(Parcel dest, int flags) {
+                    dest.writeString(this.image);
+                    dest.writeString(this.description);
+                }
+
+                protected ChildAction(Parcel in) {
+                    this.image = in.readString();
+                    this.description = in.readString();
+                }
+
+                public static final Creator<ChildAction> CREATOR = new Creator<ChildAction>() {
+                    @Override
+                    public ChildAction createFromParcel(Parcel source) {
+                        return new ChildAction(source);
+                    }
+
+                    @Override
+                    public ChildAction[] newArray(int size) {
+                        return new ChildAction[size];
+                    }
+                };
+            }
+
 
             @Override
             public int describeContents() {
@@ -74,17 +112,21 @@ public class ReferencePhaseModel implements Parcelable{
             @Override
             public void writeToParcel(Parcel dest, int flags) {
                 dest.writeString(this.title);
-                dest.writeValue(this.image);
+                dest.writeString(this.image);
                 dest.writeString(this.description);
-                dest.writeStringList(this.detail);
+                dest.writeTypedList(detail);
+            }
+
+            public ReferenceAction() {
             }
 
             protected ReferenceAction(Parcel in) {
                 this.title = in.readString();
                 this.image = in.readString();
                 this.description = in.readString();
-                this.detail = in.createStringArrayList();
+                this.detail = in.createTypedArrayList(ChildAction.CREATOR);
             }
+
             public static final Creator<ReferenceAction> CREATOR = new Creator<ReferenceAction>() {
                 @Override
                 public ReferenceAction createFromParcel(Parcel source) {
@@ -96,7 +138,6 @@ public class ReferencePhaseModel implements Parcelable{
                     return new ReferenceAction[size];
                 }
             };
-
         }
 
 
