@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:id="@+id/list_group_imageView"
-        android:contentDescription="Image"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@android:drawable/ic_menu_add" />
+        android:src="@android:drawable/ic_menu_add"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginRight="15dp" />
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/list_group_textView"
-        android:layout_alignBottom="@+id/list_group_imageView"
-        android:layout_toEndOf="@+id/list_group_imageView" />
+        android:layout_toRightOf="@+id/list_group_imageView"
+        android:id="@+id/linearLayout2">
+
+        <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/list_group_textView"
+            android:textSize="24sp"
+            android:textColor="@android:color/primary_text_light"/>
+
+        <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/list_group_descr_textView"
+            />
+    </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="15dp"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@android:drawable/arrow_down_float"
-        android:layout_marginLeft="210dp"
-        android:layout_alignTop="@+id/list_group_textView"
+        android:id="@+id/expanded_direction_imageView"
+        android:src="@drawable/group_indicator"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/list_group_descr_textView"
-        android:layout_below="@+id/list_group_imageView"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>

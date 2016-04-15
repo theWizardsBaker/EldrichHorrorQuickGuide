@@ -6,16 +6,16 @@
           "actions" : [
             {
               "title" : "Travel",
-              "image":null,
-              "description":"Move to an ajacent space",
+              "image": "navigation",
+              "description":"Move to an ajacent connecting space",
               "detail":[
-                "Train tickets used on Train Paths",
-                "Ship tickets used on Ship Paths"
+                "Move an extra space using a travel ticket",
+                "Train tickets used only on Train Paths and Ship tickets on Ship Paths"
               ]
             },
             {
               "title" : "Prepare",
-              "image":null,
+              "image": "travel_token",
               "description":"Collect a travel ticket",
               "detail":[
                 "Maximum 2 tickets per investigator",
@@ -25,7 +25,7 @@
             },
             {
               "title" : "Acquire Assets",
-              "image":null,
+              "image": "asset_card",
               "description":"Purchase Asset Cards from the reserve",
               "detail":[
                 "Influence roll determines",
@@ -35,7 +35,7 @@
             },
             {
               "title" : "Rest",
-              "image":null,
+              "image": "health_token",
               "description":"Gain 1 Health and 1 Sanity",
               "detail":[
                 "Cannot be preformed if a Monster shares the same space"
@@ -43,7 +43,7 @@
             },
             {
               "title" : "Trade",
-              "image":null,
+              "image": "trade",
               "description":"Trade possessions with another investigator",
               "detail":[
                 "Items that are tradeable: Assets, Artifacts, Clues, Spells, Travel Tickets"
@@ -51,7 +51,7 @@
             },
             {
               "title" : "Component Action",
-              "image":null,
+              "image": "investigator_card",
               "description":"Preform and action listed on Investigator sheet or card",
               "detail":[
                 "Actions are preceded by the word <b>Action:</b>",
@@ -67,7 +67,7 @@
           "actions" : [
             {
               "title" : "Combat Encounter",
-              "image":null,
+              "image":"monster",
               "description":"Encounter a Monster on the same space",
               "detail":[
                 "Investigators <i>must</i> encounter all monsters they share a space with one at a time",
@@ -76,7 +76,7 @@
             },
             {
               "title" : "Location Encounter",
-              "image":null,
+              "image": "encounter_card",
               "description":"Encounter either a space specific or general Encounter Card",
               "detail":[
                 "Text below each named space lists the most common effect found on that specific type of card"
@@ -84,7 +84,7 @@
             },
             {
               "title" : "Token Encounter",
-              "image":null,
+              "image":"expidition_token",
               "description":"Encounter a card that coresponds to a token on that space",
               "detail":[
                 "Clue token: Resolve Research Encounter card",
@@ -102,7 +102,7 @@
           "actions" : [
             {
               "title" : "Advance the Omen",
-              "image":null,
+              "image": "advance_omen",
               "description":"Move the Omen Token clockwise one space.",
               "detail":[
                 "Advance the Doom Token by one for each Gate on the gameboard that matches the Omen Token's new space"
@@ -110,7 +110,7 @@
             },
             {
               "title" : "Resolve Reconing Effects",
-              "image":null,
+              "image": "reckoning",
               "description":"Resolve all effects with a red reckoning icon",
               "detail":[
                 "Resolve the effects in order: Monsters, Ancient One sheet, <b><i>Ongoing</i></b> Mythos cards, investigator possessions and Conditions"
@@ -118,7 +118,7 @@
             },
             {
               "title" : "Spawn Gates",
-              "image":null,
+              "image": "spawn_gates",
               "description":"Spawn Gates indicated on the Reference card",
               "detail":[
                 "When a Gate is spawned, a Monster is spawned on the same space"
@@ -126,7 +126,7 @@
             },
             {
               "title" : "Monster Surge",
-              "image":null,
+              "image": "spawn_monsters",
               "description":"Spawn Monsters at <b>each Gate</b> (that match the Omen token's space)",
               "detail":[
                 "If there are no matching Gates on the game board, spawn one Gate instead"
@@ -134,7 +134,7 @@
             },
             {
               "title" : "Spawn Clues",
-              "image":null,
+              "image": "spawn_clues",
               "description":"Spawn Clues",
               "detail":[
 
@@ -142,7 +142,7 @@
             },
             {
               "title" : "Place Rumor Token",
-              "image":null,
+              "image": "place_rumor",
               "description":"Place a Rumor token on the space listed",
               "detail":[
 
@@ -150,7 +150,7 @@
             },
             {
               "title" : "Place Eldrich Tokens",
-              "image":null,
+              "image": "place_eldritch",
               "description":"Place the listed number of Eldrich tokens on this Mythos card",
               "detail":[
 

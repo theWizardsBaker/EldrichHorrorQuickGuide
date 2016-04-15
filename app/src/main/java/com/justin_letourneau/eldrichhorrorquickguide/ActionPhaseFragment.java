@@ -3,6 +3,7 @@ package com.justin_letourneau.eldrichhorrorquickguide;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -112,21 +113,36 @@ public class ActionPhaseFragment extends Fragment {
             if(convertView == null){
                 convertView = getActivity().getLayoutInflater().inflate(R.layout.expandable_list_group_item, null);
             }
+
+            ImageView arrow = (ImageView) convertView.findViewById(R.id.expanded_direction_imageView);
+            arrow.setVisibility(data.get(groupPosition).detail.size() == 0 ? View.INVISIBLE : View.VISIBLE);
+            arrow.setImageResource(isExpanded ? R.drawable.down_arrow : R.drawable.up_arrow);
+
             // get the action
             ReferencePhaseModel.ReferencePhase.ReferenceAction action = data.get(groupPosition);
             // set the title
             TextView groupTitle = (TextView)convertView.findViewById(R.id.list_group_textView);
-            groupTitle.setText(action.title);
+            groupTitle.setText(Html.fromHtml(action.title));
 
             //set the subtitle
             TextView groupSubtitle = (TextView)convertView.findViewById(R.id.list_group_descr_textView);
-            groupSubtitle.setText(action.description);
+            groupSubtitle.setText(Html.fromHtml(action.description));
 
             // set the image
-            Integer resource_image = action.image;
+            String resource_image = action.image;
             if(resource_image != null){
                 ImageView groupImage = (ImageView)convertView.findViewById(R.id.list_group_imageView);
-                groupImage.setImageResource(resource_image);
+                // get the drawable resource from a string
+                //                Integer img_resource = Resources.getSystem().getIdentifier("divider", "drawable", convertView.getContext().getPackageName());
+                Integer img_resource = null;
+                try {
+                    img_resource = R.drawable.class.getField(resource_image).getInt(null);
+                    groupImage.setImageResource(img_resource);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (NoSuchFieldException e) {
+                    e.printStackTrace();
+                }
             }
             return convertView;
         }
@@ -139,7 +155,7 @@ public class ActionPhaseFragment extends Fragment {
             String detail = data.get(groupPosition).detail.get(childPosition);
 
             TextView childDetail = (TextView) convertView.findViewById(R.id.list_child_descr_textView);
-            childDetail.setText(detail);
+            childDetail.setText(Html.fromHtml(detail));
 
             return convertView;
         }

@@ -18,4 +18,8 @@
     <string name="action_round_summary">Resolve up to <b>two</b> actions. Each action can only be preformed once per round.</string>
     <string name="encounter_round_summary">Investigators <b>must</b> preform a Combat Encounter with each monster on their space.</string>
     <string name="mythos_round_summary">Draw and resolve one Mythos card. <b>Only resolve the steps matching the icons on the card.</b></string>
+    <string name="icon_ref_horror">Horror</string>
+    <string name="icon_ref_damage">Damage</string>
+    <string name="icon_ref_spawn">Spawn Effect</string>
+    <string name="icon_ref_reckoning">Reckoning Effect</string>
 </resources>

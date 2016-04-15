@@ -41,7 +41,7 @@ public class IconReferenceFragment extends Fragment {
         }
 
         mPlayerCountSpinner = (Spinner)v.findViewById(R.id.player_count_spinner);
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, players);
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(getActivity().getApplicationContext(), R.layout.spinner_player_count, players);
         mPlayerCountSpinner.setAdapter(adapter);
 
         mPlayerCountSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

@@ -34,10 +34,11 @@
         android:text="Large Text"
         android:id="@+id/round_title_textView"
         style="@style/EldrichHeadding"
-        android:textSize="40sp"
+        android:textSize="50sp"
         android:textIsSelectable="true"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:layout_marginTop="45dp" />
 
     <com.justin_letourneau.eldrichhorrorquickguide.EldrichDescriptionTextView
         android:layout_width="wrap_content"
@@ -50,17 +51,25 @@
         android:textSize="20sp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="20dp"
-        android:scrollingCache="false" />
+        android:scrollingCache="false"
+        android:textStyle="italic"
+        android:paddingBottom="10dp" />
 
     <ExpandableListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/round_actions_expandableListView"
         android:layout_gravity="center"
-        style="@android:style/Widget.Holo.ListView.DropDown"
         android:layout_below="@+id/round_summary_textView"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:divider="@drawable/list_divider"
+        android:nestedScrollingEnabled="true"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginBottom="80dp" />
 
 </RelativeLayout>

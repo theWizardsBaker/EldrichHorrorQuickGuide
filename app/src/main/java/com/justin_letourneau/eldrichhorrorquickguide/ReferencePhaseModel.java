@@ -54,12 +54,12 @@ public class ReferencePhaseModel implements Parcelable{
 
         public static class ReferenceAction implements Parcelable{
             public String title;
-            public Integer image;
+            public String image;
             public String description;
 
             public ArrayList<String> detail;
 
-            public ReferenceAction(String title, Integer image, String description, ArrayList<String> detail) {
+            public ReferenceAction(String title, String image, String description, ArrayList<String> detail) {
                 this.title = title;
                 this.image = image;
                 this.description = description;
@@ -81,7 +81,7 @@ public class ReferencePhaseModel implements Parcelable{
 
             protected ReferenceAction(Parcel in) {
                 this.title = in.readString();
-                this.image = (Integer) in.readValue(Integer.class.getClassLoader());
+                this.image = in.readString();
                 this.description = in.readString();
                 this.detail = in.createStringArrayList();
             }
