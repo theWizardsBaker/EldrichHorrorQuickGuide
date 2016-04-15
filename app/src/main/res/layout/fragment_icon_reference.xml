@@ -5,6 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.justin_letourneau.eldrichhorrorquickguide.IconReferenceFragment">
 
+        <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_reference"
+            android:id="@+id/icon_title_textView"
+            style="@style/EldrichHeadding"
+            android:textSize="30sp"
+            android:textIsSelectable="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="italic"
+            android:layout_marginTop="15dp" />
 
         <TableLayout
             android:layout_width="wrap_content"
@@ -12,10 +24,9 @@
             android:layout_alignParentStart="false"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:layout_alignParentLeft="false"
-            android:layout_alignParentTop="true"
             android:id="@+id/tableLayout"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/icon_title_textView">
 
             <TableRow
                 android:layout_width="match_parent"

@@ -71,6 +71,6 @@
         android:focusableInTouchMode="false"
         android:layout_alignParentEnd="false"
         android:layout_marginBottom="80dp"
-        android:indicatorLeft="80dp" />
+        android:groupIndicator="@drawable/expandable_group_indicator" />
 
 </RelativeLayout>

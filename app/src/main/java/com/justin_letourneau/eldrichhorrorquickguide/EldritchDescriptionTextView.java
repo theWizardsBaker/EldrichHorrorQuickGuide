@@ -35,6 +35,8 @@ public class EldritchDescriptionTextView extends TextView{
                 case Typeface.ITALIC:
                     typeface = Typeface.createFromAsset(context.getAssets(), "fonts/Arapey-Italic.ttf");
                 break;
+                case Typeface.NORMAL:
+                    typeface = Typeface.createFromAsset(context.getAssets(), "fonts/Arapey-Regular.ttf");
                 default:
                     typeface = Typeface.createFromAsset(context.getAssets(), "fonts/Arapey-Regular.ttf");
                 break;

@@ -38,8 +38,8 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="15dp"
-        android:layout_height="wrap_content"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
         android:id="@+id/expanded_direction_imageView"
         android:src="@drawable/group_indicator"
         android:layout_alignParentStart="false"

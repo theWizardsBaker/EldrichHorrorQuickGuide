@@ -15,7 +15,7 @@
             },
             {
               "image": null,
-              "description": "Train tickets spent on Train Paths and Ship tickets on Ship Paths"
+              "description": "Train tickets may be spent on Train Paths and Ship tickets on Ship Paths to move an additional spaces"
             }
           ]
         },
@@ -49,7 +49,7 @@
           "detail":[
             {
               "image": null,
-              "description": "Influence roll determines successes"
+              "description": "Roll influence to determines successes"
             },
             {
               "image": null,
@@ -87,11 +87,11 @@
           "detail":[
             {
               "image": null,
-              "description": "Items that are tradeable: Assets, Artifacts, Clues, Spells, Travel Tickets"
+              "description": "Items that can be traded: Assets, Artifacts, Clues, Spells, Travel Tickets"
             },
             {
               "image": null,
-              "description": "Items that are <i>not</i> tradeable: Condition cards, Health tokens, Sanity tokens, Improvement tokens"
+              "description": "Items that <i>can not</i> be traded: Condition cards, Health tokens, Sanity tokens, Improvement tokens"
             },
             {
               "image": null,
@@ -139,11 +139,15 @@
             },
             {
               "image": null,
-              "description": "Investigators <i>must</i> encounter all monsters they share a space with one at a time"
+              "description": "Investigators <i>must</i> resolve a Combat Encounter with all Monsters they share a space with"
             },
             {
               "image": null,
-              "description": "After all encounters have been resolved and no Monsters share the same space, investigators <i>may choose to resolve another encounter</i>"
+              "description": "Monsters are encountered one at a time in any order"
+            },
+            {
+              "image": null,
+              "description": "After all encounters have been resolved and no Monsters share the same space, investigators <i>may choose</i> to resolve another encounter"
             },
             {
               "image": null,
@@ -210,11 +214,15 @@
         {
           "title" : "Advance the Omen",
           "image": "advance_omen",
-          "description":"Move the Omen Token clockwise one space",
+          "description":"Move the Omen Token clockwise around the Omen track",
           "detail":[
             {
               "image": "doom_token",
-              "description": "Advance Doom for each Gate on the game board that matches the Omen Token's new space"
+              "description": "Move the Omen token around the Omen track one space at a time"
+            },
+            {
+              "image": null,
+              "description": "For each space the Omen token enters, advance Doom for each Gate on the game board that matches the Omen Token's new space"
             }
           ]
         },
@@ -225,7 +233,11 @@
           "detail":[
             {
               "image": null,
-              "description": "Resolve the effects in order: Monsters, Ancient One sheet, <i>Ongoing</i> Mythos cards in play, possessions and Conditions held by investigators"
+              "description": "Resolve the effects in order: Monsters, Ancient One sheet, <i>Ongoing</i> Mythos cards in play, possessions and Condition cards held by investigators"
+            },
+            {
+              "image": null,
+              "description": "If a monster is spawned or an investigator gains a component while resolving Reckoning effects, do not resolve the Reckoning effect on that Monster or component"
             }
           ]
         },
@@ -235,19 +247,23 @@
           "description":"Spawn Gates indicated on the Reference card",
           "detail":[
             {
-              "image": null,
+              "image": "gate_token",
               "description": "Spawn the number of gates listed on the Reference card"
             },
             {
               "image": null,
               "description": "When a Gate is spawned, a Monster is spawned on the same space"
+            },
+            {
+              "image": null,
+              "description": "If a Gate cannot be spawned because the Gate stack and discard pile are empty, <i>advance Doom by 1</i>"
             }
           ]
         },
         {
           "title" : "Monster Surge",
           "image": "spawn_monsters",
-          "description":"Spawn Monsters at <i>each Gate</i> (that match the Omen token's space)",
+          "description":"Spawn Monsters at each Gate (that match the Omen token's space)",
           "detail":[
             {
               "image": null,
@@ -265,8 +281,12 @@
           "description":"Spawn Clues",
           "detail":[
             {
-              "image": null,
+              "image": "clue_token",
               "description": "Spawn the number of clues listed on the Reference card"
+            },
+            {
+              "image": null,
+              "description": "Draw a Clue token and place it on the space indicated on the front of the token"
             }
           ]
         },
@@ -276,7 +296,7 @@
           "description":"Place a Rumor token on the space listed",
           "detail":[
             {
-              "image": null,
+              "image": "rumor_token",
               "description": "Place a rumor token on the indicated space"
             }
           ]
@@ -287,15 +307,19 @@
           "description":"Place the listed number of Eldrich tokens on this Mythos card",
           "detail":[
             {
-              "image": null,
+              "image": "eldritch_token",
               "description": "Place the number of Eldrich tokens on the Mythos card"
+            },
+            {
+              "image": null,
+              "description": "Eldritch tokens can only be encountered if the component that placed it allows an investigator to encounter it"
             }
           ]
         },
         {
           "title" : "Resolve Mythos Card Effects",
           "image": "card_effect",
-          "description":"Resolve <i>Event</i> listed above the text effect",
+          "description":"Resolve Event listed above the text effect",
           "detail":[
             {
               "image": null,
@@ -303,7 +327,7 @@
             },
             {
               "image": null,
-              "description": "If there is an <i>Ongoing</i> trait it remains in play until discarded by a game effect"
+              "description": "If there is an <i>Ongoing</i> trait, the Mythos card remains in play until discarded by a game effect"
             }
           ]
         }
