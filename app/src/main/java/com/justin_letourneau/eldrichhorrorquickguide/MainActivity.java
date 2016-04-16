@@ -73,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
             Log.e("JSON", "IO JSON exception");
             e.printStackTrace();
         }
-
-
     }
 
 
