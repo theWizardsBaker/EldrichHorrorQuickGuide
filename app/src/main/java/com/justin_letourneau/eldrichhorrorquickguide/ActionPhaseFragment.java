@@ -137,6 +137,14 @@ public class ActionPhaseFragment extends Fragment {
                 Log.e("Group Image", e.toString());
             }
 
+            ImageView dividerImage = (ImageView)convertView.findViewById(R.id.list_divider_imageView);
+            // set the divider
+            if(groupPosition + 1 == getGroupCount() || isExpanded){
+                dividerImage.setVisibility(View.INVISIBLE);
+            } else {
+                dividerImage.setVisibility(View.VISIBLE);
+            }
+
             return convertView;
         }
 
@@ -145,6 +153,7 @@ public class ActionPhaseFragment extends Fragment {
             if(convertView == null){
                 convertView = getActivity().getLayoutInflater().inflate(R.layout.expandable_list_child_item, null);
             }
+
             ReferencePhaseModel.ReferencePhase.ReferenceAction.ChildAction detail = data.get(groupPosition).detail.get(childPosition);
 
             TextView childDetail = (TextView) convertView.findViewById(R.id.list_child_descr_textView);
@@ -165,6 +174,8 @@ public class ActionPhaseFragment extends Fragment {
         public boolean isChildSelectable(int groupPosition, int childPosition) {
             return false;
         }
+
+
 
         private void setImage(String imageResource, ImageView imageView) throws IllegalAccessException, NoSuchFieldException{
             if(imageResource == null) {
