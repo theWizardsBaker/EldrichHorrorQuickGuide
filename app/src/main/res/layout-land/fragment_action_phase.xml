@@ -7,8 +7,8 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="false"
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout">
@@ -34,11 +34,11 @@
         android:text="Large Text"
         android:id="@+id/round_title_textView"
         style="@style/EldrichHeadding"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textIsSelectable="true"
-        android:layout_centerHorizontal="true"
         android:textStyle="italic"
-        android:layout_marginTop="45dp" />
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
     <com.justin_letourneau.eldrichhorrorquickguide.EldritchDescriptionTextView
         android:layout_width="wrap_content"
@@ -48,6 +48,7 @@
         android:id="@+id/round_summary_textView"
         android:layout_below="@+id/round_title_textView"
         android:layout_centerHorizontal="true"
+        android:textSize="15dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:scrollingCache="false"
@@ -56,7 +57,7 @@
 
     <ExpandableListView
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:id="@+id/round_actions_expandableListView"
         android:layout_gravity="center"
         android:layout_below="@+id/round_summary_textView"
@@ -67,9 +68,8 @@
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:focusableInTouchMode="false"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:divider="@android:color/transparent"
-        android:layout_marginBottom="55dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>
